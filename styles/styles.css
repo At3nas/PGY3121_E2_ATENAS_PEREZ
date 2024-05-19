@@ -21,6 +21,8 @@ ul.navbar-nav li.nav-item.dropdown ul.dropdown-menu {
 }
 
 nav.navbar {
+  display: flex;
+  justify-content: space-evenly;
   padding: 16px;
 }
 
@@ -38,7 +40,7 @@ nav.navbar a:hover {
 /* Navbar | Espacio entre nav-items */
 ul.navbar-nav {
   display: flex;
-  gap: 8px;
+  gap: 16px;
 }
 
 /* Navbar | Marca */
@@ -59,7 +61,7 @@ nav.navbar div.d-flex form.form-control {
   flex-direction: row-reverse;
   justify-content: flex-end;
   border-radius: 40px;
-  padding: 8px 16px;
+  padding: 16px 24px;
   background-color: var(--color-bg);
   border: none;
 }
@@ -92,10 +94,11 @@ a.nav-link {
   /* elimina el padding de los elementos de navegacion */
 }
 
-
 div.navbar-aside {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
   /* espacio entre botón de inicio de sesión y carrito */
 }
 
@@ -105,6 +108,13 @@ div.carousel.slide {
   padding: 64px;
 }
 
+/* NOTA: 
+  HACER BREAKPOINT PARA QUE EL CAROUSEL SÓLO TENGA FORMA DE HOJA
+  EN LA VERSIÓN DE ESCRITORIO
+
+  EN LA VERSIÓN MÓVIL DEBE SER CUADRADO Y OCUPAR EL 100vw
+*/
 div.carousel-inner {
   border-radius: 500px 0 500px 0;
+  /* carousel en forma de hoja */
 }
