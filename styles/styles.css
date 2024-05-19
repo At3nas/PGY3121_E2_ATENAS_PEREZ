@@ -98,3 +98,13 @@ div.navbar-aside {
   gap: 24px;
   /* espacio entre botón de inicio de sesión y carrito */
 }
+
+
+/* CAROUSEL */
+div.carousel.slide {
+  padding: 64px;
+}
+
+div.carousel-inner {
+  border-radius: 500px 0 500px 0;
+}
