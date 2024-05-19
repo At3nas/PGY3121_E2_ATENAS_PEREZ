@@ -1,0 +1,100 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* VARIABLES */
+:root {
+  /* COLORES */
+  --color-bg: #F2F2F2;
+  --color-primary: #4B6A32;
+  --color-secondary: #995C3E;
+}
+
+/* GLOBAL */
+* {
+  font-family: 'Nunito Sans', Arial, Calibri, sans-serif;
+}
+
+/* NAVBAR */
+nav.navbar,
+ul.navbar-nav li.nav-item.dropdown ul.dropdown-menu {
+  background-color: var(--color-primary);
+}
+
+nav.navbar {
+  padding: 16px;
+}
+
+/* Navbar | Items de navegación */
+nav.navbar a {
+  font-weight: 600;
+  color: var(--color-bg);
+  transition: color 500ms;
+}
+
+nav.navbar a:hover {
+  color: #d4d4d4;
+}
+
+/* Navbar | Espacio entre nav-items */
+ul.navbar-nav {
+  display: flex;
+  gap: 8px;
+}
+
+/* Navbar | Marca */
+a.navbar-brand {
+  display: flex;
+  gap: 16px;
+}
+
+nav.navbar a.navbar-brand {
+  font-weight: bold;
+}
+
+/* Navbar | Barra de búsqueda */
+nav.navbar div.d-flex form.form-control {
+  width: fit-content;
+  display: flex;
+  gap: 8px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  border-radius: 40px;
+  padding: 8px 16px;
+  background-color: var(--color-bg);
+  border: none;
+}
+
+nav.navbar div.d-flex form.form-control input {
+  background-color: var(--color-bg);
+  width: 30vw;
+  /* ancho de la barra de búsqueda */
+}
+
+nav.navbar div.d-flex form.form-control button,
+nav.navbar div.d-flex form.form-control input {
+  border: none;
+  padding: 0;
+  /* elimina borde y padding del botón e input */
+}
+
+nav.navbar div.d-flex form.form-control input:focus {
+  outline: none;
+  /* elimina el borde al hacer click en el input */
+}
+
+nav.navbar div.d-flex form.form-control button:hover {
+  background-color: transparent;
+  /* elimina el fondo al pasar cursor sobre botón */
+}
+
+a.nav-link {
+  padding: 0;
+  /* elimina el padding de los elementos de navegacion */
+}
+
+
+div.navbar-aside {
+  display: flex;
+  gap: 24px;
+  /* espacio entre botón de inicio de sesión y carrito */
+}
