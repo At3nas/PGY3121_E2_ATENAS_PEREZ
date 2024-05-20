@@ -1,3 +1,5 @@
+/* Estilos globales que están presentes en todas las páginas */
+
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
@@ -7,11 +9,19 @@
   --color-bg: #F2F2F2;
   --color-primary: #4B6A32;
   --color-secondary: #995C3E;
+  --color-bg-hover: #d4d4d4;
 }
 
 /* GLOBAL */
 * {
   font-family: 'Nunito Sans', Arial, Calibri, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+body {
+  background-color: var(--color-bg);
 }
 
 /* NAVBAR */
@@ -22,8 +32,8 @@ ul.navbar-nav li.nav-item.dropdown ul.dropdown-menu {
 
 nav.navbar {
   display: flex;
-  justify-content: space-evenly;
-  padding: 16px;
+  flex-direction: row;
+  padding: 32px 16px;
 }
 
 /* Navbar | Items de navegación */
@@ -34,7 +44,7 @@ nav.navbar a {
 }
 
 nav.navbar a:hover {
-  color: #d4d4d4;
+  color: var(--color-bg-hover);
 }
 
 /* Navbar | Espacio entre nav-items */
@@ -61,14 +71,14 @@ nav.navbar div.d-flex form.form-control {
   flex-direction: row-reverse;
   justify-content: flex-end;
   border-radius: 40px;
-  padding: 16px 24px;
+  padding: 8px 16px;
   background-color: var(--color-bg);
   border: none;
 }
 
 nav.navbar div.d-flex form.form-control input {
   background-color: var(--color-bg);
-  width: 30vw;
+  width: 25vw;
   /* ancho de la barra de búsqueda */
 }
 
@@ -94,27 +104,32 @@ a.nav-link {
   /* elimina el padding de los elementos de navegacion */
 }
 
-div.navbar-aside {
+/* Dropdown Menu */
+a.nav-link.dropdown-toggle.show {
+  color: var(--color-bg-hover);
+}
+
+ul.dropdown-menu.show li a.dropdown-item:hover {
+  color: var(--color-primary);
+}
+
+div.navbar-right {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
   /* espacio entre botón de inicio de sesión y carrito */
 }
 
 
-/* CAROUSEL */
-div.carousel.slide {
-  padding: 64px;
-}
+/* DESKTOP */
+@media (min-width: 800px) {
+  main {
+    padding: 88px 128px;
+  }
 
-/* NOTA: 
-  HACER BREAKPOINT PARA QUE EL CAROUSEL SÓLO TENGA FORMA DE HOJA
-  EN LA VERSIÓN DE ESCRITORIO
-
-  EN LA VERSIÓN MÓVIL DEBE SER CUADRADO Y OCUPAR EL 100vw
-*/
-div.carousel-inner {
-  border-radius: 500px 0 500px 0;
-  /* carousel en forma de hoja */
+  div.carousel-inner {
+    border-radius: 500px 0 500px 0;
+    /* carousel en forma de hoja */
+  }
 }

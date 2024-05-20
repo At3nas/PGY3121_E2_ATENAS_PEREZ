@@ -1,0 +1,91 @@
+/* Estilos para la página de Contacto */
+
+* {
+  /* border: 1px solid black; */
+}
+
+h1,
+form.contact-form label {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BANNER DE CONTACTO */
+ul.section-contact-info {
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  list-style: none;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  margin: 32px 0 64px 0;
+}
+
+ul.section-contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+/*  */
+form.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.form-group.mb-3 {
+  width: 50%;
+}
+
+form.contact-form label,
+form.contact-form select,
+form.contact-form .form-control {
+  width: 100%;
+}
+
+form.contact-form button {
+  padding: 16px 32px;
+  border-radius: 40px;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  transition: background-color 700ms;
+}
+
+form.contact-form button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-bg);
+}
+
+/* BREAKPOINTS */
+
+/* DESKTOP */
+@media (min-width: 920px) {
+  ul.section-contact-info {
+    width: 100%;
+    height: 20vh;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 920px) {
+  main {
+    padding: 16px 24px;
+  }
+
+  ul.section-contact-info {
+    width: 50%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
