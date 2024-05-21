@@ -7,7 +7,7 @@
 :root {
   /* COLORES */
   --color-bg: #F2F2F2;
-  --color-primary: #4B6A32;
+  --color-primary: #4b6a32;
   --color-secondary: #995C3E;
   --color-bg-hover: #d4d4d4;
 }
@@ -22,6 +22,21 @@
 
 body {
   background-color: var(--color-bg);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+h1,
+h2,
+form.contact-form label {
+  font-weight: bold;
+  color: var(--color-primary);
 }
 
 /* NAVBAR */
@@ -124,7 +139,7 @@ div.navbar-right {
 
 /* DESKTOP */
 @media (min-width: 800px) {
-  main {
+  .align-padding {
     padding: 88px 128px;
   }
 
