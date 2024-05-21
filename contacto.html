@@ -22,6 +22,7 @@
 
   <!-- CUSTOM | JS -->
   <script src="script.js"></script>
+  <script src="./scripts/contacto.js"></script>
 </head>
 
 <body>
@@ -82,8 +83,8 @@
               </a>
               <!-- OPCIONES DEL MENU DESPLEGABLE -->
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
-                <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                <li><a class="dropdown-item" href="login.html">Iniciar sesión</a></li>
+                <li><a class="dropdown-item" href="register.html">Registrarse</a></li>
               </ul>
             </li>
           </ul>
@@ -95,62 +96,86 @@
 
   </nav>
 
-  <main>
+  <main class="align-padding">
     <header>
       <h1>Contáctanos</h1>
       <p>Si tienes alguna consulta o sugerencia estamos dispuestos a ayudarte a la brevedad posible. Contáctanos a
         través de nuestros canales oficiales.</p>
 
-      <ul class="section-contact-info">
-        <li>
-          <img src="./assets/icon-phone.svg">
-          +56 9 1234 5678
-        </li>
+      <div class="container text-center section-contact-info">
+        <div class="row row-cols-auto">
+          <div class="col">
+            <img src="./assets/icon-phone.svg" class="img-fluid">
+            +56 9 1234 5678
+          </div>
 
-        <li>
-          <img src="./assets/icon-email.svg">
-          contacto@verdinos.cl
-        </li>
+          <div class="col">
+            <img src="./assets/icon-email.svg" class="img-fluid">
+            contacto@verdinos.cl
+          </div>
 
-        <li>
-          <img src="./assets/icon-location.svg">
-          Santa Isabel 380
-        </li>
-      </ul>
+          <div class="col">
+            <img src="./assets/icon-location.svg" class="img-fluid">
+            Santa Isabel 380
+          </div>
+        </div>
+      </div>
     </header>
 
+    <section class="form-bg">
+      <form class="contact-form container">
+        <div class="form-group mb-3">
+          <label for="inputName" class="form-label"><sup>(*)</sup>Nombre</label>
+          <input type="text" name="inputName" class="form-control" id="inputName" placeholder="Ingrese su nombre"
+            required>
 
-    <form class="contact-form container-fluid">
-      <div class="form-group mb-3">
-        <label for="name" class="form-label">Nombre</label>
-        <input type="text" name="name" class="form-control" placeholder="Ingrese su nombre">
-      </div>
+          <div class="invalid-feedback">
+            Este campo es obligatorio.
+          </div>
+        </div>
 
-      <div class="form-group mb-3">
-        <label for="email" class="form-label">Correo electrónico</label>
-        <input type="email" name="email" class="form-control" placeholder="Ingrese su correo electrónico">
-      </div>
+        <div class="form-group mb-3">
+          <label for="inputEmail" class="form-label"><sup>(*)</sup>Correo electrónico</label>
+          <input type="email" name="inputEmail" class="form-control" id="inputEmail"
+            placeholder="Ingrese su correo electrónico">
 
-      <div class="form-group mb-3">
-        <label for="motivo" class="form-label">Motivo</label>
-        <select name="motivo" class="form-select">
-          <option value="1">Consulta</option>
-          <option value="2">Reclamo</option>
-          <option value="3">Sugerencia</option>
-          <option value="4">Felicitación</option>
-          <option value="5">Otro</option>
-        </select>
-      </div>
+          <div class="invalid-feedback">
+            Por favor, ingrese un correo electrónico válido.
+          </div>
+        </div>
 
-      <div class="form-group mb-3">
-        <label for="texto" class="form-label">Descripción</label>
-        <textarea class="form-control" id="texto" rows="3"></textarea>
-      </div>
+        <div class="form-group mb-3">
+          <label for="motivo" class="form-label"><sup>(*)</sup>Motivo</label>
+          <select name="motivo" class="form-select" id="inputMotivo">
+            <option value="0" selected>Seleccione una opción</option>
+            <option value="1">Consulta</option>
+            <option value="2">Reclamo</option>
+            <option value="3">Sugerencia</option>
+            <option value="4">Felicitación</option>
+            <option value="5">Otro</option>
+          </select>
 
-      <button type="submit" class="btn">Enviar</button>
-    </form>
+          <div class="invalid-feedback">
+            Por favor, seleccione una de las opciones.
+          </div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="inputDesc" class="form-label"><sup>(*)</sup>Descripción</label>
+          <textarea class="form-control" id="inputDesc" rows="4"></textarea>
+
+          <div class="invalid-feedback">
+            Este campo es obligatorio.
+          </div>
+        </div>
+
+        <button type="submit" class="btn" id="submitBtn">Enviar</button>
+      </form>
+    </section>
 
   </main>
+
+
   <!-- BOOTSTRAP | JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
